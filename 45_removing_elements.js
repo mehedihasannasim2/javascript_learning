@@ -6,7 +6,6 @@ const last = numbers.pop();
 // Beginning 
 const first = numbers.shift();
 
-
 // Middle
 numbers.splice(2, 2);
 

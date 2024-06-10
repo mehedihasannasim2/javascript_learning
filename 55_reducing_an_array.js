@@ -6,8 +6,7 @@ const numbers = [1,-2,4,5,6]
 //     sum += n;
 
 
-const sum = numbers.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-    }, 0);
-    
+const sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+);  
 console.log(sum)

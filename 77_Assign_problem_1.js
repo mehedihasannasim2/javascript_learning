@@ -1,12 +1,27 @@
-// Problem 1:
-// Design a TypeScript function repeatString that takes two parameters: a string and a number. The function should return a new string that repeats the input string the specified number of times.
-
 
 function repeatString(str, times) {
+    if (times < 0 && typeof times == 'number')
+        throw new Error("Put a positive integer")
     let result = ('');
     for (let i = 0; i < times; i++) {
-       result += str + "\n";
+       result += str + '\n';
     }
     return result;
  }
- console.log(repeatString('abc', 3));
+
+try {  
+    console.log(repeatString('abc', -3));
+
+} catch (error) {
+    console.log(error.message);
+}
+
+
+
+
+// using build in method
+const repeatition = (str, time) => {
+    if (time <= 0) return "put a positive number";
+    return str.repeat(time)
+}
+console.log(repeatition('abc', -3));

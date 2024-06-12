@@ -3,8 +3,8 @@
 
 
 function filterEvenNumbers(array) {
-    return array.reduce((a) => (a % 2 === 0) ? a.push(array) : continue);
+    return array.filter(n => !(n % 2))
 }
 
-console.log(filterEvenNumbers([1,2,3,4,5,6]))
+console.log(filterEvenNumbers([1,2,3,4,5,6]));
 
